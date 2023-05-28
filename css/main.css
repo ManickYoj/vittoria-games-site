@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Libre+Baskerville:wght@400;700&display=swap');
+
+.cormorant {
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.baskerville {
+  font-family: 'Libre Baskerville', serif;
+}
+
+a.link {
+  text-decoration: underline;
+}
+
+input {
+  border: 3px solid #333;
+}
