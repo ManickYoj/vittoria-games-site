@@ -31,12 +31,12 @@
     <script>
       const iframe_top = document.getElementById("steam-frame-top")
       iframe_top.onload = () => {
-        iframe.querySelector('.btn_addtocart_content').addEventListener("click", () => fbq('track', 'AddToWishlist'));
+        iframe_top.querySelector('.btn_addtocart_content').addEventListener("click", () => fbq('track', 'AddToWishlist'));
       }
 
       const iframe_bottom = document.getElementById("steam-frame-bottom")
       iframe_bottom.onload = () => {
-        iframe.querySelector('.btn_addtocart_content').addEventListener("click", () => fbq('track', 'AddToWishlist'));
+        iframe_bottom.querySelector('.btn_addtocart_content').addEventListener("click", () => fbq('track', 'AddToWishlist'));
       }
     </script>
   </noscript>
