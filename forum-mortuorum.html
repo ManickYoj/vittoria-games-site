@@ -27,14 +27,26 @@
     </script>
     <noscript><img height="1" width="1" style="display:none"
     src="https://www.facebook.com/tr?id=980980120756530&ev=PageView&noscript=1"
-    /></noscript>
+    />
+    <script>
+      const iframe_top = document.getElementById("steam-frame-top")
+      iframe_top.onload = () => {
+        iframe.querySelector('.btn_addtocart_content').addEventListener("click", () => fbq('track', 'AddToWishlist'));
+      }
+
+      const iframe_bottom = document.getElementById("steam-frame-bottom")
+      iframe_bottom.onload = () => {
+        iframe.querySelector('.btn_addtocart_content').addEventListener("click", () => fbq('track', 'AddToWishlist'));
+      }
+    </script>
+  </noscript>
     <!-- End Meta Pixel Code -->
   </head>
 
   <body class="cormorant">
     <div class="flex justify-center flex-col items-center px-2">
       <h1><img src="./images/fm-logo.png" alt="The words 'Forum Mortuorum' in a Romanesque font" /></h1>
-      <iframe src="https://store.steampowered.com/widget/2368530/" frameborder="0" class="w-full min-h-[190px] max-w-[800px] md:-mt-16"></iframe>
+      <iframe src="https://store.steampowered.com/widget/2368530/" frameborder="0" class="w-full min-h-[190px] max-w-[800px] md:-mt-16" id="steam-frame-top"></iframe>
       <!-- <h2 class="-mt-6 text-2xl">Gladiator Managment</h2> -->
     </div>
 
@@ -149,7 +161,7 @@
       <div class="flex justify-center flex-col items-center px-2 mt-4 mb-6">
           <h2 class="text-6xl text-center w-full cormorant mb-1">WISHLIST NOW!</h2>
           <p class="text-lg text-center">Seriously. It really helps us</p>
-        <iframe src="https://store.steampowered.com/widget/2368530/" frameborder="0" class="w-full mt-4 min-h-[190px] max-w-[800px]"></iframe>
+        <iframe src="https://store.steampowered.com/widget/2368530/" frameborder="0" class="w-full mt-4 min-h-[190px] max-w-[800px]" id="steam-frame-top"></iframe>
       </div>
 
 
