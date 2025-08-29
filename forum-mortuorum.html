@@ -28,9 +28,20 @@
     <noscript><img height="1" width="1" style="display:none"
     src="https://www.facebook.com/tr?id=980980120756530&ev=PageView&noscript=1"
     />
-    <script>
+<!--     <script>
       const iframe_top = document.getElementById("steam-frame-top")
       iframe_top.onload = () => {
+        const iframe_script = document.createElement("script");
+        iframe_top.appendChild(iframe_script);
+        iframe_script.innerText("!function(f,b,e,v,n,t,s)
+          {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+          n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+          if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+          n.queue=[];t=b.createElement(e);t.async=!0;
+          t.src=v;s=b.getElementsByTagName(e)[0];
+          s.parentNode.insertBefore(t,s)}(window, document,'script',
+          'https://connect.facebook.net/en_US/fbevents.js');");
+
         iframe_top.querySelector('.btn_addtocart_content').addEventListener("click", () => fbq('track', 'AddToWishlist'));
       }
 
@@ -38,19 +49,92 @@
       iframe_bottom.onload = () => {
         iframe_bottom.querySelector('.btn_addtocart_content').addEventListener("click", () => fbq('track', 'AddToWishlist'));
       }
-    </script>
+    </script> -->
   </noscript>
     <!-- End Meta Pixel Code -->
   </head>
 
-  <body class="cormorant">
+  <body >
     <div class="flex justify-center flex-col items-center px-2">
       <h1><img src="./images/fm-logo.png" alt="The words 'Forum Mortuorum' in a Romanesque font" /></h1>
-      <iframe src="https://store.steampowered.com/widget/2368530/" frameborder="0" class="w-full min-h-[190px] max-w-[800px] md:-mt-16" id="steam-frame-top"></iframe>
+      <!-- <iframe src="https://store.steampowered.com/widget/2368530/" frameborder="0" class="w-full min-h-[190px] max-w-[800px] md:-mt-16" id="steam-frame-top"></iframe> -->
+
+      <!-- Copy of Steam Widget to handle FB clicks -->
+      <diV class="w-full min-h-[190px] max-w-[800px] md:-mt-16" id="steam-frame-top">
+        <link href="https://store.fastly.steamstatic.com/public/shared/css/motiva_sans.css?v=YzJgj1FjzW34&amp;l=english&amp;_cdn=fastly" rel="stylesheet" type="text/css">
+        <link href="https://store.fastly.steamstatic.com/public/shared/css/shared_global.css?v=Vb1LCAP6Ghzy&amp;l=english&amp;_cdn=fastly" rel="stylesheet" type="text/css">
+        <link href="https://store.fastly.steamstatic.com/public/shared/css/buttons.css?v=BZhNEtESfYSJ&amp;l=english&amp;_cdn=fastly" rel="stylesheet" type="text/css">
+        <link href="https://store.fastly.steamstatic.com/public/css/v6/store.css?v=pHTiTSR6CUM1&amp;l=english&amp;_cdn=fastly" rel="stylesheet" type="text/css">
+        <link href="https://store.fastly.steamstatic.com/public/css/styles_linux.css?v=LcZAgwD7_TSW&amp;l=english&amp;_cdn=fastly" rel="stylesheet" type="text/css">
+        <link href="https://store.fastly.steamstatic.com/public/css/styles_widget.css?v=P15JPQ14Jxxz&amp;l=english&amp;_cdn=fastly" rel="stylesheet" type="text/css">
+        <link href="https://store.fastly.steamstatic.com/public/css/v6/game.css?v=YwTx_bh1aMAt&amp;l=english&amp;_cdn=fastly" rel="stylesheet" type="text/css">
+        <script type="text/javascript" src="https://store.fastly.steamstatic.com/public/shared/javascript/jquery-1.8.3.min.js?v=NXam5zydzNu8&amp;l=english&amp;_cdn=fastly"></script>
+        <link rel="image_src" href="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2368530/capsule_231x87.jpg?t=1737227133">
+        <script type="text/javascript">
+          function addToWishlist()
+          {
+            try
+            {
+              document.forms['add_to_wishlist'].submit();
+            }
+            catch( e )
+            {
+            }
+          }
+        </script>
+        <link type="text/css" rel="stylesheet" id="dark-mode-custom-link"><link type="text/css" rel="stylesheet" id="dark-mode-general-link"><style lang="en" type="text/css" id="dark-mode-custom-style"></style><style lang="en" type="text/css" id="dark-mode-native-style"></style><style lang="en" type="text/css" id="dark-mode-native-sheet"></style></head>
+
+        <div id="widget">
+          <div id="header" class="header_container">
+            <h1 class="main_text" style="max-width: 544px;">
+              <a href="https://store.steampowered.com/app/2368530/Forum_Mortuorum/?snr=1_5_1100__1100&amp;utm_source=steamwidget" target="_blank" rel="noreferrer">Forum Mortuorum</a>
+            </h1><h1 class="tail">&nbsp;<a target="_blank" href="https://store.steampowered.com/app/2368530/Forum_Mortuorum/?snr=1_5_1100__1100&amp;utm_source=steamwidget"><em>on Steam</em></a></h1>  </div>
+          <script type="text/javascript">
+
+            function ResizeText( errorMargin )
+            {
+              var containerWidth = $("#header").innerWidth();
+              var width= $("#header > .tail").outerWidth();
+              $('#header > .main_text').css( {'max-width': containerWidth - width });
+            }
+
+            $(window).load(function() {
+              ResizeText(0);
+            });
+
+            $(window).resize(function() {
+              ResizeText(0);
+            });
+          </script>
+
+          <div class="desc">
+            <a href="https://store.steampowered.com/app/2368530/Forum_Mortuorum/?snr=1_5_1100__1100&amp;utm_source=steamwidget" target="_blank" rel="noreferrer"><img class="capsule" src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2368530/capsule_184x69.jpg?t=1737227133"></a>
+            Take the reins of a Roman gladiator school. Hire, equip, and train your team and invest in your facilities. Avail yourself of the unique items and rare magic offered by eclectic visitors. Manage your team wisely: once in the arena, your gladiators must fend for themselves. Glory and death!  </div>
+          <div class="game_area_purchase_platform"><span class="platform_img win"></span><span class="platform_img linux"></span></div>
+              <div class="game_purchase_action">
+              <form name="add_to_wishlist" action="https://store.steampowered.com/api/addtowishlist/" method="POST" target="_blank">
+                <input type="hidden" name="snr" value="1_5_1100_">
+                <input type="hidden" name="sessionid" value="cecbee9d29c52dfee3283b05">
+                <input type="hidden" name="appid" value="2368530">
+                <input type="hidden" name="widget" value="1">
+              </form>
+              <div class="game_purchase_action_bg coming_soon">
+                <div class="coming_soon_date">
+                  <h1>Available: 2026</h1>
+                </div>
+
+                <div class="btn_addtocart">
+                  <a class="btn_addtocart_content" href="javascript:addToWishlist();">
+                    Wishlist on Steam</a>
+                </div>
+              </div>
+            </div>
+        </div>
+      </diV>
       <!-- <h2 class="-mt-6 text-2xl">Gladiator Managment</h2> -->
     </div>
 
-    <main class="mt-4 max-w-screen-xl px-2 mx-auto">
+    <main class="mt-4 max-w-screen-xl px-2 mx-auto cormorant">
       <hr class="border-t-2" />
         <section class="border-t-2 mt-2 pt-2 mb-8 px-1 md:px-3 md:mx-0">
         <div class="flex justify-between border-white gap-4 items-start text-white">
@@ -161,7 +245,7 @@
       <div class="flex justify-center flex-col items-center px-2 mt-4 mb-6">
           <h2 class="text-6xl text-center w-full cormorant mb-1">WISHLIST NOW!</h2>
           <p class="text-lg text-center">Seriously. It really helps us</p>
-        <iframe src="https://store.steampowered.com/widget/2368530/" frameborder="0" class="w-full mt-4 min-h-[190px] max-w-[800px]" id="steam-frame-top"></iframe>
+          <!-- <iframe src="https://store.steampowered.com/widget/2368530/" frameborder="0" class="w-full mt-4 min-h-[190px] max-w-[800px]" id="steam-frame-top"></iframe> -->
       </div>
 
 
