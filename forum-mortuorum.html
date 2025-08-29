@@ -42,7 +42,6 @@
           s.parentNode.insertBefore(t,s)}(window, document,'script',
           'https://connect.facebook.net/en_US/fbevents.js');");
 
-        iframe_top.querySelector('.btn_addtocart_content').addEventListener("click", () => fbq('track', 'AddToWishlist'));
       }
 
       const iframe_bottom = document.getElementById("steam-frame-bottom")
@@ -54,7 +53,7 @@
     <!-- End Meta Pixel Code -->
   </head>
 
-  <body >
+  <body>
     <div class="flex justify-center flex-col items-center px-2">
       <h1><img src="./images/fm-logo.png" alt="The words 'Forum Mortuorum' in a Romanesque font" /></h1>
       <!-- <iframe src="https://store.steampowered.com/widget/2368530/" frameborder="0" class="w-full min-h-[190px] max-w-[800px] md:-mt-16" id="steam-frame-top"></iframe> -->
@@ -114,7 +113,7 @@
               <div class="game_purchase_action">
               <form name="add_to_wishlist" action="https://store.steampowered.com/api/addtowishlist/" method="POST" target="_blank">
                 <input type="hidden" name="snr" value="1_5_1100_">
-                <input type="hidden" name="sessionid" value="cecbee9d29c52dfee3283b05">
+                <input class="steam_session_id" type="hidden" name="sessionid" value="cecbee9d29c52dfee3283b05">
                 <input type="hidden" name="appid" value="2368530">
                 <input type="hidden" name="widget" value="1">
               </form>
@@ -134,9 +133,9 @@
       <!-- <h2 class="-mt-6 text-2xl">Gladiator Managment</h2> -->
     </div>
 
-    <main class="mt-4 max-w-screen-xl px-2 mx-auto cormorant">
+    <main class="mt-4 max-w-screen-xl px-2 mx-auto">
       <hr class="border-t-2" />
-        <section class="border-t-2 mt-2 pt-2 mb-8 px-1 md:px-3 md:mx-0">
+        <section class="border-t-2 mt-2 pt-2 mb-8 px-1 md:px-3 md:mx-0 cormorant">
         <div class="flex justify-between border-white gap-4 items-start text-white">
           <!-- <span class="text-sm text-right">CURRENT PROTOTYPE</span> -->
         </div>
@@ -161,7 +160,7 @@
         </div>
       </section>
 
-      <section class="border-t-2 mt-2 pt-2 mb-8 px-1 md:px-3 md:mx-0">
+      <section class="border-t-2 mt-2 pt-2 mb-8 px-1 md:px-3 md:mx-0 cormorant">
         <div class="flex justify-between border-white gap-4 items-start text-white">
           <!-- <span class="text-sm text-right">CURRENT WORK</span> -->
         </div>
@@ -186,7 +185,7 @@
         </div>
       </section>
 
-      <section class="border-t-2 mt-2 pt-2 mb-8 px-1 md:px-3 md:mx-0">
+      <section class="border-t-2 mt-2 pt-2 mb-8 px-1 md:px-3 md:mx-0 cormorant">
         <div class="flex justify-between border-white gap-4 items-start text-white">
           <!-- <span class="text-sm text-right">PROTOTYPE / ON HOLD</span> -->
         </div>
@@ -212,8 +211,7 @@
         </div>
       </section>
 
-      <!-- TODO: PORKCHOPOLIS -->
-      <section class="border-t-2 mt-2 pt-2 mb-8 px-1 md:px-3 md:mx-0">
+      <section class="border-t-2 mt-2 pt-2 mb-8 px-1 md:px-3 md:mx-0 cormorant">
         <div class="flex justify-between border-white gap-4 items-start text-white">
           <!-- <span class="text-sm text-right">In Development</span> -->
         </div>
@@ -234,7 +232,7 @@
       </section>
 
 
-        <section class="border-t-2 border-b-2 mt-2 pt-2 px-1 md:px-3 md:mx-0">
+        <section class="border-t-2 border-b-2 mt-2 pt-2 px-1 md:px-3 md:mx-0 cormorant">
           <h2 class="text-6xl text-center w-full cormorant mb-3">AND MUCH MORE...</h2>
           <p class="mt-2 mb-3 baskerville">We have bold ambitions and will not have completed our work until Forum becomes the gladiator management game <i>nec plus ultra</i>: with no equal.</p>
           <img class="mb-4" src="./images/fm-roadmap.avif">
@@ -243,11 +241,13 @@
       <hr class="border-t-2 mt-2" />
 
       <div class="flex justify-center flex-col items-center px-2 mt-4 mb-6">
+          <div class="cormorant">
           <h2 class="text-6xl text-center w-full cormorant mb-1">WISHLIST NOW!</h2>
           <p class="text-lg text-center">Seriously. It really helps us</p>
+        </div>
           <!-- <iframe src="https://store.steampowered.com/widget/2368530/" frameborder="0" class="w-full mt-4 min-h-[190px] max-w-[800px]" id="steam-frame-top"></iframe> -->
                 <!-- Copy of Steam Widget to handle FB clicks -->
-          <diV class="w-full min-h-[190px] max-w-[800px] md:-mt-16" id="steam-frame-bottom">
+          <diV class="w-full min-h-[190px] max-w-[800px] mt-4" id="steam-frame-bottom">
             <link href="https://store.fastly.steamstatic.com/public/shared/css/motiva_sans.css?v=YzJgj1FjzW34&amp;l=english&amp;_cdn=fastly" rel="stylesheet" type="text/css">
             <link href="https://store.fastly.steamstatic.com/public/shared/css/shared_global.css?v=Vb1LCAP6Ghzy&amp;l=english&amp;_cdn=fastly" rel="stylesheet" type="text/css">
             <link href="https://store.fastly.steamstatic.com/public/shared/css/buttons.css?v=BZhNEtESfYSJ&amp;l=english&amp;_cdn=fastly" rel="stylesheet" type="text/css">
@@ -301,7 +301,7 @@
                   <div class="game_purchase_action">
                   <form name="add_to_wishlist" action="https://store.steampowered.com/api/addtowishlist/" method="POST" target="_blank">
                     <input type="hidden" name="snr" value="1_5_1100_">
-                    <input type="hidden" name="sessionid" value="cecbee9d29c52dfee3283b05">
+                    <input type="hidden" class="steam_session_id" name="sessionid" value="cecbee9d29c52dfee3283b05">
                     <input type="hidden" name="appid" value="2368530">
                     <input type="hidden" name="widget" value="1">
                   </form>
@@ -346,4 +346,19 @@
 
   <!-- Mailchimp Script -->
   <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
+  <script>
+    function generate_uuid() {
+        return "10000000100040008000100000000000".replace(/[018]/g, c =>
+          (+c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> +c / 4).toString(16)
+        );
+      }
+    const uuid = generate_uuid();
+    const class_list = document.getElementsByClassName('steam_session_id');
+
+    // Javascript is an awful language
+    for ( let i = 0; i < class_list.length; i++) {
+      class_list.item(i).value = uuid;
+    };
+
+  </script>
 </html>
